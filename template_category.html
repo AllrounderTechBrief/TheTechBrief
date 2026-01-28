@@ -1,0 +1,63 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <img src="assets/logo.svg" alt="Tech Brief" width="32" height="32">
+  <div class="brand">Tech Brief</div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="ai-news.html">AI News</a>
+    <a href="broadcast-tech.html">Broadcast Tech</a>
+    <a href="enterprise-tech.html">Enterprise Tech</a>
+    <a href="cybersecurity-updates.html">Cybersecurity</a>
+    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+  </nav>
+</header>
+<section class="section">
+  <h1>{{ meta.h1 }}</h1>
+  <h2>{{ meta.h2 }}</h2>
+  <div class="grid">
+    {% for card in cards %}
+    <div class="card">
+      {% if card.image %}<img src="{{ card.image }}" alt="Article image">{% endif %}
+      <div class="content">
+        <h3><a href="{{ card.link }}" target="_blank" rel="noopener">{{ card.title }}</a></h3>
+        <p>{{ card.summary }}</p>
+        <p class="source">Source: {{ card.source }}</p>
+      </div>
+      <div class="meta">
+        <span class="tag">{{ card.category }}</span>
+        <a href="{{ card.link }}" target="_blank" rel="noopener">Read original</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<footer class="footer">
+  © <span id="year"></span> thetechbrief.in. All rights reserved. AI-generated summaries based on public RSS feeds. All trademarks belong to their respective owners.
+  <br>
+  <a href="legal/privacy.html">Privacy Policy</a> •
+  <a href="legal/terms.html">Terms</a> •
+  <a href="legal/disclaimer.html">Disclaimer</a> •
+  <a href="legal/copyright.html">Copyright</a> •
+  <a href="legal/security.html">Security</a> •
+  <a href="legal/affiliate.html">Affiliate Disclosure</a>
+</footer>
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to improve your browsing experience, analyze traffic, and support affiliate partnerships. By continuing to use this site, you consent to our use of cookies in accordance with our Privacy Policy.</p>
+  <button class="btn primary" onclick="localStorage.setItem('cookieConsent','yes'); document.getElementById('cookieBanner').remove();">Accept</button>
+  <button class="btn secondary" onclick="localStorage.setItem('cookieConsent','no'); document.getElementById('cookieBanner').remove();">Reject</button>
+  <a href="legal/privacy.html">Learn More</a>
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear(); if(localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').remove();</script>
+</body></html>
