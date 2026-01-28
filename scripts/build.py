@@ -27,19 +27,95 @@ def clean_text(html):
 
 
 def first_image(entry):
-    media = entry.get('media_content') or entry.get('media_thumbnail')
-    if media and isinstance(media, list):
-        url = media[0].get('url')
-        if url: return url
-    enc = entry.get('enclosures')
-    if enc and isinstance(enc, list):
-        for e in enc:
-            if 'image' in e.get('type',''):
-                if e.get('href'): return e.get('href')
-    desc = entry.get('summary') or entry.get('description') or ''
-    soup = BeautifulSoup(desc, 'html.parser')
-    img = soup.find('img')
-    return img['src'] if img and img.has_attr('src') else None
+  from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+
+def _pick_from_img_tag(img):
+    """Try common attributes used for lazy-loading and responsive images."""
+    for attr in ("src", "data-src", "data-original"):
+        if img and img.get(attr):
+            return img.get(attr)
+    # srcset: take the first URL (format: 'url width, url width, ...')
+    if img and img.get("srcset"):
+        return img.get("srcset").split()[0]
+    return None
+
+def _looks_like_image(url):
+    """Quick heuristic to filter obvious non-image URLs."""
+    if not url:
+        return False
+    path = urlparse(url).path.lower()
+    return any(path.endswith(ext) for ext in (".jpg", ".jpeg", ".png", ".webp", ".gif"))
+
+def first_image(entry):
+    """
+    Robust RSS image extractor:
+    - media:content / media:thumbnail
+    - enclosures (with or without image/* type)
+    - content:encoded (WordPress-style)
+    - summary/description HTML (with lazy-load attrs and srcset)
+    - (optional) known logo fallbacks for broadcast sources
+    """
+
+    # 1) media:content (list of dicts with 'url')
+    media_content = entry.get("media_content")
+    if media_content and isinstance(media_content, list):
+        for m in media_content:
+            url = m.get("url")
+            if _looks_like_image(url):
+                return url
+
+    # 2) media:thumbnail
+    media_thumb = entry.get("media_thumbnail")
+    if media_thumb and isinstance(media_thumb, list):
+        for t in media_thumb:
+            url = t.get("url")
+            if _looks_like_image(url):
+                return url
+
+    # 3) enclosures (sometimes type isn't set correctly)
+    enclosures = entry.get("enclosures")
+    if enclosures and isinstance(enclosures, list):
+        for e in enclosures:
+            url = e.get("href") or e.get("url")
+            if _looks_like_image(url):
+                return url
+            if "image" in (e.get("type") or "") and url:  # image/* mimetype
+                return url
+
+    # 4) content:encoded (Atom/WordPress-style content blocks)
+    content_blocks = entry.get("content")
+    if content_blocks and isinstance(content_blocks, list):
+        for c in content_blocks:
+            html = c.get("value") or c.get("content") or ""
+            soup = BeautifulSoup(html, "html.parser")
+            img = soup.find("img")
+            url = _pick_from_img_tag(img)
+            if url:
+                return url
+
+    # 5) summary/description (HTML)
+    desc_html = entry.get("summary") or entry.get("description") or ""
+    if desc_html:
+        soup = BeautifulSoup(desc_html, "html.parser")
+        img = soup.find("img")
+        url = _pick_from_img_tag(img)
+        if url:
+            return url
+
+    # 6) Optional: special-case fallbacks for Broadcast Tech sources (logo thumbnails)
+    # Feel free to delete this section if you prefer not to hotlink publisher logos.
+    source_title = (entry.get("source", {}) or {}).get("title", "") or ""
+    st_lower = source_title.lower()
+    if "tvbeurope" in st_lower:
+        return "https://www.tvbeurope.com/wp-content/uploads/sites/11/2022/01/tvbeurope-logo.png"
+    if "newscaststudio" in st_lower:
+        return "https://www.newscaststudio.com/wp-content/themes/newscaststudio/images/logo.png"
+    if "vizrt" in st_lower:
+        return "https://www.vizrt.com/wp-content/uploads/2021/06/vizrt-logo.png"
+
+    # 7) Nothing found
+    return None
 
 
 def parse_time(entry):
