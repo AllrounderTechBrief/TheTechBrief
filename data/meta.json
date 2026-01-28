@@ -1,0 +1,38 @@
+{
+  "Home": {
+    "title": "Tech Brief \u2014 AI, Broadcast Tech, Enterprise IT, Cybersecurity, Mobile & Gadgets",
+    "description": "Receive fast, AI-generated summaries of the latest updates in AI, broadcast technology, enterprise tech, and mobile gadgets. Real-time insights sourced from trusted global tech websites.",
+    "h1": "Tech Brief \u2014 Modern Tech Magazine",
+    "h2": "AI-generated summaries from trusted RSS sources"
+  },
+  "AI News": {
+    "title": "AI News | Tech Brief",
+    "description": "Stay informed with the latest AI breakthroughs, machine learning research, automation trends, and industry developments. Short, clear AI-generated summaries from top global sources.",
+    "h1": "AI News",
+    "h2": "Breakthroughs in ML, automation, and industry applications"
+  },
+  "Broadcast Tech": {
+    "title": "Broadcast Technology & Media Workflow Updates | Tech Brief",
+    "description": "Explore updates in broadcast engineering, playout systems, cloud production, and media workflows. AI-generated summaries from Avid, Harmonic, Pebble, VizRT, and more.",
+    "h1": "Broadcast Technology & Media Workflow Updates",
+    "h2": "Industry Insights from Avid, Harmonic, Pebble, VizRT & AWS for Media"
+  },
+  "Enterprise Tech": {
+    "title": "Enterprise Technology & Cloud Infrastructure News | Tech Brief",
+    "description": "Discover the newest trends in enterprise technology, cloud infrastructure, cybersecurity, servers, and IT innovation. Quick AI-generated summaries from trusted industry sources.",
+    "h1": "Enterprise Technology & Cloud Infrastructure News",
+    "h2": "AI-generated summaries on servers, cybersecurity & IT innovation"
+  },
+  "Cybersecurity Updates": {
+    "title": "Cybersecurity News & Threat Intelligence | Tech Brief",
+    "description": "Security updates from CSO Online & DarkReading. Stay ahead with AI-generated summaries of threats, vulnerabilities, and defenses.",
+    "h1": "Cybersecurity News & Threat Intelligence",
+    "h2": "Security updates from CSO Online & DarkReading"
+  },
+  "Mobile & Gadgets": {
+    "title": "Mobile & Gadget News | Tech Brief",
+    "description": "Get the latest smartphone launches, gadget news, wearables, and consumer tech updates. Fast AI-generated summaries from leading tech publications.",
+    "h1": "Mobile & Gadget News",
+    "h2": "Smartphone launches, wearables & consumer tech highlights"
+  }
+}
