@@ -1,0 +1,51 @@
+.tech-brief-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    font-family: system-ui, sans-serif;
+}
+
+.tagline {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.tabs button:hover {
+    background: #e9e9e9;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+}
+
+.summary-card h3 {
+    margin-top: 0;
+}
+
+.summary-card a {
+    display: inline-block;
+    margin-top: 12px;
+}
