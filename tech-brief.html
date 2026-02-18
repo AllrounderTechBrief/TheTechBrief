@@ -1,0 +1,39 @@
+<section class="tech-brief-container">
+    <h1>Tech Brief Summaries</h1>
+    <p class="tagline">Fast, AI‑powered summaries from trusted tech sources.</p>
+
+    <div class="tabs">
+        <button data-tab="AI">AI</button>
+        <button data-tab="Mobile">Mobile</button>
+        <button data-tab="Enterprise">Enterprise</button>
+        <button data-tab="Broadcast">Broadcast</button>
+    </div>
+
+    <div id="summary-content" class="summary-content">
+        <p>Select a category above to view summaries.</p>
+    </div>
+</section>
+
+<script>
+async function loadCategory(category) {
+    const res = await fetch(`/summaries/${category.toLowerCase()}.json`);
+    const data = await res.json();
+
+    const container = document.getElementById("summary-content");
+    container.innerHTML = "";
+
+    data.forEach(item => {
+        container.innerHTML += `
+            <div class="summary-card">
+                <h3>${item.title}</h3>
+                <div class="summary-text">${item.summary.replace(/\n/g, "<br>")}</div>
+                <a href="${item.link}" target="_blank">Read full article →</a>
+            </div>
+        `;
+    });
+}
+
+document.querySelectorAll(".tabs button").forEach(button => {
+    button.addEventListener("click", () => loadCategory(button.dataset.tab));
+});
+</script>tech-brief.html
