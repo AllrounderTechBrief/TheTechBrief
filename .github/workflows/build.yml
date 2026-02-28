@@ -2,41 +2,58 @@ name: Build Tech Brief
 
 on:
   push:
-    branches: [ main ]          # also builds automatically when you push
+    branches: [ main ]
   schedule:
-    - cron: "0 */3 * * *"       # every 3 hours
-  workflow_dispatch:             # allow manual runs too
+    - cron: "0 */6 * * *"      # every 6 hours
+  workflow_dispatch:
 
 permissions:
-  contents: write                # REQUIRED to push to gh-pages
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout main branch
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
-      - name: Setup Python
+      - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
         run: |
-          pip install feedparser beautifulsoup4 sumy python-slugify jinja2
+          pip install feedparser beautifulsoup4 sumy python-slugify jinja2 nltk
 
-      - name: Build static site
+      - name: Download NLTK tokenizer data
+        run: |
+          python -c "
+          import nltk
+          nltk.download('punkt', quiet=True)
+          nltk.download('punkt_tab', quiet=True)
+          print('NLTK ready')
+          "
+
+      - name: Run build script
         run: |
           python scripts/build.py
-          test -f site/index.html  # fail fast if site/ not built
+          echo "--- Generated files in docs/ ---"
+          ls -la docs/
+          test -f docs/index.html || (echo "ERROR: docs/index.html not found" && exit 1)
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}   # uses repo token
-          publish_dir: site                           # must exist
-          publish_branch: gh-pages
-          user_name: "github-actions[bot]"            # set committer identity
-          user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Commit and push generated site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-build site [skip ci]"
+            git push origin main
+          fi
