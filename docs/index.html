@@ -1,255 +1,625 @@
-<!doctype html><html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity, Mobile & Gadgets</title>
   <meta name="description" content="Receive fast, AI-generated summaries of the latest updates in AI, broadcast technology, enterprise tech, and mobile gadgets. Real-time insights sourced from trusted global tech websites.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity, Mobile & Gadgets">
+  <meta property="og:description" content="Receive fast, AI-generated summaries of the latest updates in AI, broadcast technology, enterprise tech, and mobile gadgets. Real-time insights sourced from trusted global tech websites.">
+  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity, Mobile & Gadgets">
+  <meta name="twitter:description" content="Receive fast, AI-generated summaries of the latest updates in AI, broadcast technology, enterprise tech, and mobile gadgets. Real-time insights sourced from trusted global tech websites.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Tech Brief",
+    "url": "https://allroundertechbrief.github.io/TheTechBrief/",
+    "description": "Receive fast, AI-generated summaries of the latest updates in AI, broadcast technology, enterprise tech, and mobile gadgets. Real-time insights sourced from trusted global tech websites.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Tech Brief",
+      "email": "technodate3@gmail.com"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://allroundertechbrief.github.io/TheTechBrief/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header class="header">
-  <img src="assets/logo.svg" alt="Tech Brief" width="32" height="32">
-  <div class="brand">Tech Brief</div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
+    <div class="brand-icon" aria-hidden="true">TB</div>
+    <span class="brand-name">Tech Brief</span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" aria-current="page">Home</a>
     <a href="ai-news.html">AI News</a>
     <a href="broadcast-tech.html">Broadcast Tech</a>
     <a href="enterprise-tech.html">Enterprise Tech</a>
     <a href="cybersecurity-updates.html">Cybersecurity</a>
     <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+    <a href="consumer-tech.html">Consumer Tech</a>
+    <a href="gaming.html">Gaming</a>
+    <a href="evs-automotive.html">EVs &amp; Automotive</a>
+    <a href="startups-business.html">Startups &amp; Business</a>
+    <a href="how-to.html">How-To Guides</a>
+    <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
-<section class="hero">
-  <h1>Tech Brief — Modern Tech Magazine</h1>
-  <p>AI-generated summaries from trusted RSS sources</p>
-  <div class="cat-links">
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Site introduction">
+  <div class="hero-inner">
+    <span class="hero-label">Updated Every 6 Hours &mdash; Tech Brief — Modern Tech Magazine</span>
+    <h1>Your Daily Technology Intelligence Brief</h1>
+    <p class="hero-sub">Editorially reviewed summaries across AI, enterprise tech, cybersecurity, broadcast technology, and mobile &mdash; sourced from the world's most trusted publications.</p>
+    <nav class="cat-pill-row" aria-label="Browse by category">
+      <a href="ai-news.html" class="cat-pill">&#x1F916; AI News</a>
+      <a href="broadcast-tech.html" class="cat-pill">&#x1F4E1; Broadcast Tech</a>
+      <a href="enterprise-tech.html" class="cat-pill">&#x1F3E2; Enterprise Tech</a>
+      <a href="cybersecurity-updates.html" class="cat-pill">&#x1F510; Cybersecurity</a>
+      <a href="mobile-gadgets.html" class="cat-pill">&#x1F4F1; Mobile &amp; Gadgets</a>
+      <a href="consumer-tech.html" class="cat-pill">&#x1F6D2; Consumer Tech</a>
+      <a href="gaming.html" class="cat-pill">&#x1F3AE; Gaming</a>
+      <a href="evs-automotive.html" class="cat-pill">&#x1F697; EVs &amp; Automotive</a>
+      <a href="startups-business.html" class="cat-pill">&#x1F4BC; Startups &amp; Business</a>
+    </nav>
   </div>
 </section>
-<section class="section">
-  <h2>Latest Highlights</h2>
-  <div class="grid">
-    
-    <div class="card">
-      <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/16KB-Page-File-Setting-Menu.jpg" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.androidauthority.com/android-page-sizes-explained-3644598/" target="_blank" rel="noopener">16KB page sizes return with the Android 17 beta, but what does it mean?</a></h3>
-        <p>Google is pushing developers to 16KB page apps for a future switch.</p>
-        <p class="source">Source: Android Authority</p>
+
+<!-- ===== TECH TRENDING NOW ===== -->
+<section class="trending-now" aria-label="Tech Trending Now">
+  <div class="trending-inner">
+    <div class="trending-meta">
+      <div class="trending-live">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="live-label">Live</span>
       </div>
-      <div class="meta">
-        <span class="tag">Mobile & Gadgets</span>
-        <a href="https://www.androidauthority.com/android-page-sizes-explained-3644598/" target="_blank" rel="noopener">Read original</a>
-      </div>
+      <h2 class="trending-title">Tech Trending Now</h2>
+      <time class="trending-date" datetime="2026-03-03">Tue, 3 March 2026</time>
     </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://www.engadget.com/entertainment/charlie-brown-now-works-for-sony-125619518.html?src=rss" target="_blank" rel="noopener">Charlie Brown now works for Sony</a></h3>
-        <p>Sony Music Entertainment Japan and Sony Pictures Entertainment now officially own 80 percent of the Peanuts franchise. The companies have closed the deal, which was officially announced in December 2025 when it was still subject to regulatory approvals, for $460 million.</p>
-        <p class="source">Source: Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Mobile & Gadgets</span>
-        <a href="https://www.engadget.com/entertainment/charlie-brown-now-works-for-sony-125619518.html?src=rss" target="_blank" rel="noopener">Read original</a>
-      </div>
+    <ol class="trending-list">
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">01</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--breaking">Breaking</span>
+            <a class="trend-source" href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer">apple.com/newsroom</a>
+          </div>
+          <h3 class="trending-headline"><a href="mobile-gadgets.html">Apple Unveils iPhone 17e &amp; M4 iPad Air</a></h3>
+          <p class="trending-summary">The <strong>iPhone 17e</strong> ($599) debuts the A19 chip while the new <strong>M4 iPad Air</strong> targets AI-heavy workflows &mdash; claimed 30% faster than its predecessor.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">02</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--mwc">MWC 2026</span>
+            <a class="trend-source" href="https://news.samsung.com/global/" target="_blank" rel="noopener noreferrer">Samsung Newsroom</a>
+          </div>
+          <h3 class="trending-headline"><a href="mobile-gadgets.html">Samsung Galaxy S26 Ultra: The Privacy Display King</a></h3>
+          <p class="trending-summary">Live from Barcelona &mdash; the <strong>Galaxy S26 Ultra</strong> debuts Agentic AI and a Privacy Display that physically blocks side-angle viewing. A first for a flagship.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">03</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--innovation">Innovation</span>
+            <a class="trend-source" href="https://www.gsmarena.com/" target="_blank" rel="noopener noreferrer">GSMArena &middot; MWC</a>
+          </div>
+          <h3 class="trending-headline"><a href="consumer-tech.html">The Robot Phone Era Has Begun</a></h3>
+          <p class="trending-summary">Honor's <strong>AI Robot Phone</strong> uses micro-motors to physically track users mid-call. Its humanoid companion can moonwalk. ARRI collaborated on its cinema imaging.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">04</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--ai">AI Alert</span>
+            <a class="trend-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
+          </div>
+          <h3 class="trending-headline"><a href="ai-news.html">ChatGPT Facing a Mass Uninstall Wave</a></h3>
+          <p class="trending-summary">A US military partnership announcement triggered a 295% surge in uninstalls. Rivals including Anthropic's <strong>Claude</strong> released major free-tier upgrades to capture displaced users.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">05</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--ev">EVs</span>
+            <a class="trend-source" href="https://insideevs.com/" target="_blank" rel="noopener noreferrer">InsideEVs</a>
+          </div>
+          <h3 class="trending-headline"><a href="evs-automotive.html">Volkswagen Hits 2 Million EVs Sold</a></h3>
+          <p class="trending-summary">VW quietly became Europe's top EV brand — delivering its <strong>2 millionth electric model</strong> ahead of schedule. CEO says 2026 will be its biggest EV year yet.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">06</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--enterprise">Enterprise</span>
+            <a class="trend-source" href="https://www.darkreading.com/" target="_blank" rel="noopener noreferrer">Dark Reading</a>
+          </div>
+          <h3 class="trending-headline"><a href="cybersecurity-updates.html">Critical OpenClaw Vulnerability Targets AI Agents</a></h3>
+          <p class="trending-summary">A now-patched flaw in the widely-used <strong>OpenClaw framework</strong> exposed AI agents to remote takeover. Security teams urged to patch immediately — adoption has been rapid.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="trending-footer">
+      <a href="ai-news.html" class="trending-cta">Browse all tech news <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
-    
-    <div class="card">
-      <img src="https://gizmodo.com/app/uploads/2025/03/barnard-star-exoplanet-1280x853.jpg" alt="Article image">
-      <div class="content">
-        <h3><a href="https://gizmodo.com/astronomers-calculated-the-lifespan-of-intelligent-civilizations-and-its-not-looking-good-for-us-2000728756" target="_blank" rel="noopener">Astronomers Estimated the Lifespan of Alien Civilizations, and It’s Not Looking Good for Us</a></h3>
-        <p>Our search for extraterrestrial life has turned up empty, perhaps because technologically advanced civilizations are doomed to fail.</p>
-        <p class="source">Source: Gizmodo</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Mobile & Gadgets</span>
-        <a href="https://gizmodo.com/astronomers-calculated-the-lifespan-of-intelligent-civilizations-and-its-not-looking-good-for-us-2000728756" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/microsoft_365_e7_rumors/" target="_blank" rel="noopener">Microsoft reportedly eyes E7 tier to make AI agents pay their way - like the humans they'll replace</a></h3>
-        <p>Redmond wants a monthly cut from every digital worker on your payroll. Agents don't need dental, they will need a SKU Microsoft is reportedly planning to license AI agents like employees - and charge accordingly.…</p>
-        <p class="source">Source: The Register</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Enterprise Tech</span>
-        <a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/microsoft_365_e7_rumors/" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/google_chrome_bug_gemini/" target="_blank" rel="noopener">Chrome Gemini panel became privilege escalator for rogue extensions</a></h3>
-        <p>High-severity flaw let malicious add-ons access system via browser's embedded AI feature Security boffins have discovered a high-severity bug in Google Chrome that allowed malicious extensions to hijack its Gemini Live AI panel and inherit privileges they were never meant to have.…</p>
-        <p class="source">Source: The Register</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Enterprise Tech</span>
-        <a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/google_chrome_bug_gemini/" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt1e42cdf9c23a6955/69a6c775b8555a620ad35369/muhammadtoqeer-iran-cyber-flag-shutterstock.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.darkreading.com/threat-intelligence/war-pro-iranian-actors-cyberattacks" target="_blank" rel="noopener">As War Continues, Pro-Iranian Actors Launch Barrage of Cyberattacks</a></h3>
-        <p>Iran and its supporters have taken to cyberspace to retaliate for US-Israeli military action, with an aim to cause economic and physical disruption.</p>
-        <p class="source">Source: darkreading</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Cybersecurity Updates</span>
-        <a href="https://www.darkreading.com/threat-intelligence/war-pro-iranian-actors-cyberattacks" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="https://www.tvbeurope.com/wp-content/uploads/2026/03/Eurovision-2026-726x408.jpg" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.tvbeurope.com/eurovision-2023/eurovision-2026-aims-to-enhance-green-credentials-with-fully-led-and-laser-based-lighting-concept" target="_blank" rel="noopener">Eurovision 2026 aims to enhance green credentials with fully LED- and laser-based lighting concept</a></h3>
-        <p>Broadcaster ORF has set itself a goal of minimising its CO₂ footprint as much as possible The post Eurovision 2026 aims to enhance green credentials with fully LED- and laser-based lighting concept appeared first on TVBEurope .</p>
-        <p class="source">Source: TVBEurope</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Broadcast Tech</span>
-        <a href="https://www.tvbeurope.com/eurovision-2023/eurovision-2026-aims-to-enhance-green-credentials-with-fully-led-and-laser-based-lighting-concept" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/french_medical_leak/" target="_blank" rel="noopener">Cybercriminals swipe 15.8M medical records from French doctors ministry</a></h3>
-        <p>Third-party software supplier breached leading to leak of notes Around 15.8 million administrative files were stolen after attackers breached a software supplier to France's health ministry.…</p>
-        <p class="source">Source: The Register</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Enterprise Tech</span>
-        <a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/french_medical_leak/" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="https://www.tvbeurope.com/wp-content/uploads/2026/03/unnamed-1.png" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.tvbeurope.com/media-management/iko-media-group-launches-unified-broadcast-operations-platform" target="_blank" rel="noopener">iKO Media Group launches unified broadcast operations platform</a></h3>
-        <p>Available immediately, iKOSYSTEM unifies satellite, cloud, OTT, FAST, monitoring, and engagement tools within a single operational architecture The post iKO Media Group launches unified broadcast operations platform appeared first on TVBEurope .</p>
-        <p class="source">Source: TVBEurope</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Broadcast Tech</span>
-        <a href="https://www.tvbeurope.com/media-management/iko-media-group-launches-unified-broadcast-operations-platform" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="https://www.tvbeurope.com/wp-content/uploads/2026/03/Jamie-Dunn.jpg" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.tvbeurope.com/business/people/lawo-appoints-jamie-dunn-as-ceo" target="_blank" rel="noopener">Lawo appoints Jamie Dunn as CEO</a></h3>
-        <p>Dunn takes over as CEO from Philipp Lawo, who will join the company's supervisory board The post Lawo appoints Jamie Dunn as CEO appeared first on TVBEurope .</p>
-        <p class="source">Source: TVBEurope</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Broadcast Tech</span>
-        <a href="https://www.tvbeurope.com/business/people/lawo-appoints-jamie-dunn-as-ceo" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt8b4a90dc0f0b5b75/69a60296c1c8e5611b80bbeb/openclaw_Koshiro_K_shutterstock.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.darkreading.com/application-security/critical-openclaw-vulnerability-ai-agent-risks" target="_blank" rel="noopener">Critical OpenClaw Vulnerability Exposes AI Agent Risks</a></h3>
-        <p>The now-patched flaw is the latest in a growing string of security issues associated with the viral AI tool, which has seen rapid adoption among developers.</p>
-        <p class="source">Source: darkreading</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Cybersecurity Updates</span>
-        <a href="https://www.darkreading.com/application-security/critical-openclaw-vulnerability-ai-agent-risks" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt0c35949af234a749/69a6057c74173e6ab55fd0d8/2PYHW0W.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Article image">
-      <div class="content">
-        <h3><a href="https://www.darkreading.com/cloud-security/tug-of-war-firewall-backlogs-ai-driven-development" target="_blank" rel="noopener">The Tug-of-War Over Firewall Backlogs in the AI-Driven Development Era</a></h3>
-        <p>Speed and security are historically clashing priorities, but with AI and automation, it's increasingly important that application developers and security teams get on the same page.</p>
-        <p class="source">Source: darkreading</p>
-      </div>
-      <div class="meta">
-        <span class="tag">Cybersecurity Updates</span>
-        <a href="https://www.darkreading.com/cloud-security/tug-of-war-firewall-backlogs-ai-driven-development" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener">Gemini can now automate some multi-step tasks on Android</a></h3>
-        <p>Gemini on Android will be able to automate tasks involving rideshare requests, or grocery or food delivery, says Google.</p>
-        <p class="source">Source: AI | TechCrunch</p>
-      </div>
-      <div class="meta">
-        <span class="tag">AI News</span>
-        <a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener">Amazon’s AI-powered Alexa+ gets new personality options</a></h3>
-        <p>Users will be able to choose from Alexa styles like Brief, Chill, or Sweet, Amazon says.</p>
-        <p class="source">Source: AI | TechCrunch</p>
-      </div>
-      <div class="meta">
-        <span class="tag">AI News</span>
-        <a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      
-      <div class="content">
-        <h3><a href="https://techcrunch.com/2026/02/24/uber-engineers-built-ai-version-of-boss-dara-khosrowshahi/" target="_blank" rel="noopener">Uber engineers built an AI version of their boss</a></h3>
-        <p>Uber CEO Dara Khosrowshahi said the company’s employees have gone all in on AI, going so far as to build a chatbot of him that they use to practice their pitches.</p>
-        <p class="source">Source: AI | TechCrunch</p>
-      </div>
-      <div class="meta">
-        <span class="tag">AI News</span>
-        <a href="https://techcrunch.com/2026/02/24/uber-engineers-built-ai-version-of-boss-dara-khosrowshahi/" target="_blank" rel="noopener">Read original</a>
-      </div>
-    </div>
-    
   </div>
 </section>
-<footer class="footer">
-  © <span id="year"></span> thetechbrief.in. All rights reserved. AI-generated summaries based on public RSS feeds. All trademarks belong to their respective owners.
-  <br>
-  <a href="legal/privacy.html">Privacy Policy</a> •
-  <a href="legal/terms.html">Terms</a> •
-  <a href="legal/disclaimer.html">Disclaimer</a> •
-  <a href="legal/copyright.html">Copyright</a> •
-  <a href="legal/security.html">Security</a> •
-  <a href="legal/affiliate.html">Affiliate Disclosure</a>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main-content">
+
+  <!-- ===== LATEST STORIES GRID ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest Across All Categories</h2>
+      <span class="section-count">All topics &middot; Sorted by date</span>
+      <span class="section-sub">Summaries from trusted global tech publications</span>
+    </div>
+    <div class="grid">
+      
+      <article class="card" aria-label="The long-delayed The Division Resurgence hits iOS and Android on March 31">
+        
+        <div class="card-body">
+          <h3><a href="https://www.engadget.com/gaming/the-long-delayed-the-division-resurgence-hits-ios-and-android-on-march-31-193905948.html?src=rss" target="_blank" rel="noopener noreferrer">The long-delayed The Division Resurgence hits iOS and Android on March 31</a></h3>
+          <p class="card-summary">Ubisoft is finally releasing The Division Resurgence on March 31 for both iOS and Android. This game was first announced all the way back in 2021 and has suffered from delays in recent years.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/gaming/the-long-delayed-the-division-resurgence-hits-ios-and-android-on-march-31-193905948.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: The long-delayed The Division Resurgence hits iOS and Android on March 31">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Samsung’s Privacy Display on the Galaxy S26 Ultra may be hurting image quality">
+        
+        <div class="card-img-wrap">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/Samsung-Galaxy-S26-Ultra-in-hand-showing-Privacy-Display-quick-settings.jpg" alt="Illustration for: Samsung’s Privacy Display on the Galaxy S26 Ultra may be hurting image quality" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.androidauthority.com/galaxy-s26-ultra-display-quality-3646239/" target="_blank" rel="noopener noreferrer">Samsung’s Privacy Display on the Galaxy S26 Ultra may be hurting image quality</a></h3>
+          <p class="card-summary">Everyone seems disappointed with the Galaxy S26 Ultra's screen fidelity compared to the S25U.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/galaxy-s26-ultra-display-quality-3646239/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Samsung’s Privacy Display on the Galaxy S26 Ultra may be hurting image quality">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Is your Pixel getting Google’s big Android 16 QPR3 update? Here’s every supported phone">
+        
+        <div class="card-img-wrap">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/android-16-qpr3-logo-hero-photo-2-scaled.jpg" alt="Illustration for: Is your Pixel getting Google’s big Android 16 QPR3 update? Here’s every supported phone" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.androidauthority.com/android-16-qpr3-update-supported-pixel-models-3645552/" target="_blank" rel="noopener noreferrer">Is your Pixel getting Google’s big Android 16 QPR3 update? Here’s every supported phone</a></h3>
+          <p class="card-summary">QPR! QPR!</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/android-16-qpr3-update-supported-pixel-models-3645552/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Is your Pixel getting Google’s big Android 16 QPR3 update? Here’s every supported phone">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Lawmakers take pick to ICE's warrantless location tracking purchases">
+        
+        <div class="card-body">
+          <h3><a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/us_lawmakers_ice_data_purchases/" target="_blank" rel="noopener noreferrer">Lawmakers take pick to ICE's warrantless location tracking purchases</a></h3>
+          <p class="card-summary">After DHS’s $2.3M PenLink contract gets ‘shady’ label A group of 70 US lawmakers has called on Homeland Security's inspector general to investigate whether its agencies - including US Immigration and Customs Enforcement (ICE) - illegally purchased Americans' location data without first obtaining warrants.…</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Register</span>
+          <span class="tag">Enterprise Tech</span>
+          <a href="https://go.theregister.com/feed/www.theregister.com/2026/03/03/us_lawmakers_ice_data_purchases/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Lawmakers take pick to ICE's warrantless location tracking purchases">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="The March Pixel Drop just landed with 8 big upgrades for your Android device - what's new">
+        
+        <div class="card-body">
+          <h3><a href="https://www.zdnet.com/article/march-pixel-drop-upgrades-android-devices-whats-new/" target="_blank" rel="noopener noreferrer">The March Pixel Drop just landed with 8 big upgrades for your Android device - what's new</a></h3>
+          <p class="card-summary">Not everything is exclusive to Pixel users. Some of the changes are coming to Android devices, too.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Latest news</span>
+          <span class="tag">Enterprise Tech</span>
+          <a href="https://www.zdnet.com/article/march-pixel-drop-upgrades-android-devices-whats-new/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: The March Pixel Drop just landed with 8 big upgrades for your Android device - what's new">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="How Quill Meetings built an agentic ‘chief of AI staff’ that takes private meeting notes">
+        
+        <div class="card-img-wrap">
+          <img src="https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2025/06/A-data-poem-being-written-by-multiple-ghostly-hands-abstract-art-grey-monotone-with-splashes-of-colo.jpeg" alt="Illustration for: How Quill Meetings built an agentic ‘chief of AI staff’ that takes private meeting notes" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://siliconangle.com/2026/03/03/quill-meetings-built-agentic-chief-ai-staff-takes-private-meeting-notes/" target="_blank" rel="noopener noreferrer">How Quill Meetings built an agentic ‘chief of AI staff’ that takes private meeting notes</a></h3>
+          <p class="card-summary">Online meetings are increasingly joined by bots that automatically take notes and observe from the cloud. But is there a better option?</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">SiliconANGLE</span>
+          <span class="tag">Enterprise Tech</span>
+          <a href="https://siliconangle.com/2026/03/03/quill-meetings-built-agentic-chief-ai-staff-takes-private-meeting-notes/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: How Quill Meetings built an agentic ‘chief of AI staff’ that takes private meeting notes">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="MS NOW puts ‘We the People’ at the center of its election night brand">
+        
+        <div class="card-img-wrap">
+          <img src="https://www.newscaststudio.com/wp-content/uploads/2025/11/NCS_MS-NOW-STUDIO-A_2025_002-1-262x140.jpeg" alt="Illustration for: MS NOW puts ‘We the People’ at the center of its election night brand" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.newscaststudio.com/2026/03/03/ms-now-puts-we-the-people-at-the-center-of-its-election-night-brand/" target="_blank" rel="noopener noreferrer">MS NOW puts ‘We the People’ at the center of its election night brand</a></h3>
+          <p class="card-summary">For the first time in its nearly 30-year history, MS NOW is entering an election ... Read More The post MS NOW puts ‘We the People’ at the center of its election night brand appeared first on NCS | NewscastStudio .</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">NCS | NewscastStudio</span>
+          <span class="tag">Broadcast Tech</span>
+          <a href="https://www.newscaststudio.com/2026/03/03/ms-now-puts-we-the-people-at-the-center-of-its-election-night-brand/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: MS NOW puts ‘We the People’ at the center of its election night brand">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Telemundo releases official FIFA World Cup 2026 song ‘Somos Más’">
+        
+        <div class="card-body">
+          <h3><a href="https://www.newscaststudio.com/2026/03/03/telemundo-fifa-world-cup-2026-song/" target="_blank" rel="noopener noreferrer">Telemundo releases official FIFA World Cup 2026 song ‘Somos Más’</a></h3>
+          <p class="card-summary">Telemundo dropped its official FIFA World Cup 2026 song March 3, 2026. Titled “Somos Más,” ...</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">NCS | NewscastStudio</span>
+          <span class="tag">Broadcast Tech</span>
+          <a href="https://www.newscaststudio.com/2026/03/03/telemundo-fifa-world-cup-2026-song/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Telemundo releases official FIFA World Cup 2026 song ‘Somos Más’">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Telemundo announces full slate of FIFA World Cup 2026 coverage">
+        
+        <div class="card-img-wrap">
+          <img src="https://www.newscaststudio.com/wp-content/uploads/2026/03/telemundo-world-cup-2026-song-262x140.jpg" alt="Illustration for: Telemundo announces full slate of FIFA World Cup 2026 coverage" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.newscaststudio.com/2026/03/03/telemundo-fifa-world-cup-2026-coverage/" target="_blank" rel="noopener noreferrer">Telemundo announces full slate of FIFA World Cup 2026 coverage</a></h3>
+          <p class="card-summary">With 100 days to go until the kickoff of FIFA World Cup 2026 on June ... Read More The post Telemundo announces full slate of FIFA World Cup 2026 coverage appeared first on NCS | NewscastStudio .</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">NCS | NewscastStudio</span>
+          <span class="tag">Broadcast Tech</span>
+          <a href="https://www.newscaststudio.com/2026/03/03/telemundo-fifa-world-cup-2026-coverage/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Telemundo announces full slate of FIFA World Cup 2026 coverage">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="AI Agent Overload: How to Solve the Workload Identity Crisis">
+        
+        <div class="card-img-wrap">
+          <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt7d24be5a5d5eede1/69a5f3508999bf720c9d53ee/Authentication_Zoonar_GmbH_Alamy.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Illustration for: AI Agent Overload: How to Solve the Workload Identity Crisis" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.darkreading.com/cloud-security/ai-agent-workload-identity-crisis" target="_blank" rel="noopener noreferrer">AI Agent Overload: How to Solve the Workload Identity Crisis</a></h3>
+          <p class="card-summary">Workloads keep getting more complicated and organizations are struggling to keep up. So what's the play?</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">darkreading</span>
+          <span class="tag">Cybersecurity Updates</span>
+          <a href="https://www.darkreading.com/cloud-security/ai-agent-workload-identity-crisis" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: AI Agent Overload: How to Solve the Workload Identity Crisis">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="As War Continues, Pro-Iranian Actors Launch Barrage of Cyberattacks">
+        
+        <div class="card-img-wrap">
+          <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt1e42cdf9c23a6955/69a6c775b8555a620ad35369/muhammadtoqeer-iran-cyber-flag-shutterstock.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Illustration for: As War Continues, Pro-Iranian Actors Launch Barrage of Cyberattacks" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.darkreading.com/threat-intelligence/war-pro-iranian-actors-cyberattacks" target="_blank" rel="noopener noreferrer">As War Continues, Pro-Iranian Actors Launch Barrage of Cyberattacks</a></h3>
+          <p class="card-summary">Iran and its supporters have taken to cyberspace to retaliate for US-Israeli military action, with an aim to cause economic and physical disruption.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">darkreading</span>
+          <span class="tag">Cybersecurity Updates</span>
+          <a href="https://www.darkreading.com/threat-intelligence/war-pro-iranian-actors-cyberattacks" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: As War Continues, Pro-Iranian Actors Launch Barrage of Cyberattacks">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Critical OpenClaw Vulnerability Exposes AI Agent Risks">
+        
+        <div class="card-img-wrap">
+          <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt8b4a90dc0f0b5b75/69a60296c1c8e5611b80bbeb/openclaw_Koshiro_K_shutterstock.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Illustration for: Critical OpenClaw Vulnerability Exposes AI Agent Risks" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.darkreading.com/application-security/critical-openclaw-vulnerability-ai-agent-risks" target="_blank" rel="noopener noreferrer">Critical OpenClaw Vulnerability Exposes AI Agent Risks</a></h3>
+          <p class="card-summary">The now-patched flaw is the latest in a growing string of security issues associated with the viral AI tool, which has seen rapid adoption among developers.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">darkreading</span>
+          <span class="tag">Cybersecurity Updates</span>
+          <a href="https://www.darkreading.com/application-security/critical-openclaw-vulnerability-ai-agent-risks" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Critical OpenClaw Vulnerability Exposes AI Agent Risks">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Gemini can now automate some multi-step tasks on Android">
+        
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener noreferrer">Gemini can now automate some multi-step tasks on Android</a></h3>
+          <p class="card-summary">Gemini on Android will be able to automate tasks involving rideshare requests, or grocery or food delivery, says Google.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Gemini can now automate some multi-step tasks on Android">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Amazon’s AI-powered Alexa+ gets new personality options">
+        
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener noreferrer">Amazon’s AI-powered Alexa+ gets new personality options</a></h3>
+          <p class="card-summary">Users will be able to choose from Alexa styles like Brief, Chill, or Sweet, Amazon says.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Amazon’s AI-powered Alexa+ gets new personality options">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Uber engineers built an AI version of their boss">
+        
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/2026/02/24/uber-engineers-built-ai-version-of-boss-dara-khosrowshahi/" target="_blank" rel="noopener noreferrer">Uber engineers built an AI version of their boss</a></h3>
+          <p class="card-summary">Uber CEO Dara Khosrowshahi said the company’s employees have gone all in on AI, going so far as to build a chatbot of him that they use to practice their pitches.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/24/uber-engineers-built-ai-version-of-boss-dara-khosrowshahi/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Uber engineers built an AI version of their boss">Read original</a>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+
+  <!-- Editorial transparency notice -->
+  <div class="section" style="padding-top:0;">
+    <div class="info-box">
+      <p><strong>About our coverage:</strong> The Tech Brief is an independent technology publication. Our editorial team reviews and summarises technology developments from across the industry. We do not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Learn more about our editorial process &rarr;</a></p>
+    </div>
+  </div>
+
+  <!-- Original articles teaser -->
+  <div class="section" style="padding-top:0;">
+    <div class="section-head">
+      <h2>Original Analysis &amp; Deep Dives</h2>
+      <span class="section-count">Written by The Tech Brief editorial team</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block;">AI News</span>
+          <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
+          <p class="card-summary">Beyond the hype &mdash; a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">Original</span>
+          <a href="articles/ai-agents-enterprise-2025.html" class="read-link">Read analysis</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block;">Cybersecurity</span>
+          <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
+          <p class="card-summary">Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the defensive controls that consistently stop or limit damage.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">Original</span>
+          <a href="articles/ransomware-playbook-2025.html" class="read-link">Read analysis</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block;">Mobile &amp; Gadgets</span>
+          <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
+          <p class="card-summary">After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads &mdash; and where the gap has closed to near-irrelevance.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">Original</span>
+          <a href="articles/android-vs-iphone-2025.html" class="read-link">Read analysis</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===== BROWSE BY CATEGORY (moved here, before footer) ===== -->
+  <div class="section" style="padding-bottom:0;">
+    <div class="section-head">
+      <h2>Browse by Category</h2>
+      <span class="section-count">9 categories &mdash; updated every 6 hours</span>
+    </div>
+    <nav class="category-grid" aria-label="Browse all categories">
+      <a href="ai-news.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F916;</span>
+        <span class="cat-card-name">AI News</span>
+        <span class="cat-card-desc">Machine learning, LLMs &amp; AI products</span>
+      </a>
+      <a href="broadcast-tech.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F4E1;</span>
+        <span class="cat-card-name">Broadcast Tech</span>
+        <span class="cat-card-desc">TV, streaming &amp; production technology</span>
+      </a>
+      <a href="enterprise-tech.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F3E2;</span>
+        <span class="cat-card-name">Enterprise Tech</span>
+        <span class="cat-card-desc">Cloud, SaaS &amp; IT infrastructure</span>
+      </a>
+      <a href="cybersecurity-updates.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F510;</span>
+        <span class="cat-card-name">Cybersecurity</span>
+        <span class="cat-card-desc">Threats, breaches &amp; defences</span>
+      </a>
+      <a href="mobile-gadgets.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F4F1;</span>
+        <span class="cat-card-name">Mobile &amp; Gadgets</span>
+        <span class="cat-card-desc">Smartphones, wearables &amp; devices</span>
+      </a>
+      <a href="consumer-tech.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F6D2;</span>
+        <span class="cat-card-name">Consumer Tech</span>
+        <span class="cat-card-desc">Reviews, hardware &amp; buying guides</span>
+      </a>
+      <a href="gaming.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F3AE;</span>
+        <span class="cat-card-name">Gaming</span>
+        <span class="cat-card-desc">Games, consoles &amp; industry news</span>
+      </a>
+      <a href="evs-automotive.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F697;</span>
+        <span class="cat-card-name">EVs &amp; Automotive</span>
+        <span class="cat-card-desc">Electric vehicles &amp; car tech</span>
+      </a>
+      <a href="startups-business.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F4BC;</span>
+        <span class="cat-card-name">Startups &amp; Business</span>
+        <span class="cat-card-desc">Funding, M&amp;A &amp; Big Tech strategy</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- ===== QUICK ACTIONS (moved here, before footer) ===== -->
+  <div class="section" style="padding-bottom:28px; padding-top:28px;">
+    <div class="quick-actions" role="complementary" aria-label="Quick actions">
+      <div class="qa-item">
+        <a href="about.html#editorial-process">
+          <span class="qa-icon" aria-hidden="true">&#x1F4D6;</span>Read Our Editorial Approach
+        </a>
+        <p>How we select, summarise and contextualise every story we publish.</p>
+      </div>
+      <div class="qa-item">
+        <a href="articles/ai-agents-enterprise-2025.html">
+          <span class="qa-icon" aria-hidden="true">&#x270D;&#xFE0F;</span>Read Original Analysis
+        </a>
+        <p>In-depth original articles written by our editorial team on key trends.</p>
+      </div>
+      <div class="qa-item">
+        <a href="contact.html">
+          <span class="qa-icon" aria-hidden="true">&#x2709;&#xFE0F;</span>Submit a Tip or Story
+        </a>
+        <p>Spotted a story we should cover? Send us a link and a brief note.</p>
+      </div>
+      <p class="qa-trust">Content on this site is AI-assisted and periodically reviewed by The Tech Brief editorial team. Original reporting &copy; respective publishers; commentary and curation &copy; The Tech Brief 2025&ndash;2026.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-about">
+      <span class="brand-name">The Tech Brief</span>
+      <p>An independent technology publication delivering concise, editorially reviewed coverage from across the technology industry. Updated every six hours, 24/7.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="ai-news.html">AI News</a>
+      <a href="broadcast-tech.html">Broadcast Tech</a>
+      <a href="enterprise-tech.html">Enterprise Tech</a>
+      <a href="cybersecurity-updates.html">Cybersecurity</a>
+      <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+      <a href="consumer-tech.html">Consumer Tech</a>
+      <a href="gaming.html">Gaming</a>
+      <a href="evs-automotive.html">EVs &amp; Automotive</a>
+      <a href="startups-business.html">Startups &amp; Business</a>
+      <a href="how-to.html">How-To Guides</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site Info</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal/privacy.html">Privacy Policy</a>
+      <a href="legal/terms.html">Terms of Use</a>
+      <a href="legal/disclaimer.html">Disclaimer</a>
+      <a href="legal/copyright.html">Copyright</a>
+      <a href="legal/affiliate.html">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.in. All rights reserved.</span>
+    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+  </div>
 </footer>
-<div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to improve your browsing experience, analyze traffic, and support affiliate partnerships. By continuing to use this site, you consent to our use of cookies in accordance with our Privacy Policy.</p>
-  <button class="btn primary" onclick="localStorage.setItem('cookieConsent','yes'); document.getElementById('cookieBanner').remove();">Accept</button>
-  <button class="btn secondary" onclick="localStorage.setItem('cookieConsent','no'); document.getElementById('cookieBanner').remove();">Reject</button>
-  <a href="legal/privacy.html">Learn More</a>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p>We use cookies to improve your experience, analyse traffic, and support affiliate partnerships. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept All</button>
+    <button class="btn secondary" id="cookieReject">Reject</button>
+  </div>
 </div>
-<script>document.getElementById('year').textContent = new Date().getFullYear(); if(localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').remove();</script>
-</body></html>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  (function(){
+    var c=localStorage.getItem('cookieConsent');
+    if(c){document.getElementById('cookieBanner').remove();return;}
+    document.getElementById('cookieAccept').onclick=function(){localStorage.setItem('cookieConsent','yes');document.getElementById('cookieBanner').remove();};
+    document.getElementById('cookieReject').onclick=function(){localStorage.setItem('cookieConsent','no');document.getElementById('cookieBanner').remove();};
+  })();
+  (function(){
+    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
+    if(!t||!n)return;
+    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+  })();
+</script>
+</body>
+</html>
